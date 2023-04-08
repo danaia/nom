@@ -635,7 +635,7 @@ GameObject:
   - component: {fileID: 1494651684}
   - component: {fileID: 1494651683}
   - component: {fileID: 1494651687}
-  - component: {fileID: 1494651686}
+  - component: {fileID: 1494651688}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -730,21 +730,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1494651686
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1494651682}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d9c23108b6dca74384b2d8c7c14dd72, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 250
-  jogSpeedMultiplier: 1.5
-  jogKey: 304
 --- !u!50 &1494651687
 Rigidbody2D:
   serializedVersion: 4
@@ -766,3 +751,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1494651688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1494651682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d9c23108b6dca74384b2d8c7c14dd72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 250
+  jogSpeedMultiplier: 1.5
+  jogKey: 304

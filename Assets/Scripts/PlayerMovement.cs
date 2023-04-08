@@ -1,4 +1,6 @@
 using UnityEngine;
+//add animator
+
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -9,9 +11,13 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb2d;       // Reference to the Rigidbody2D component
     private Vector2 movementInput; // Movement input from player
 
+    private Animator animator;
+    private bool isMoving = false;
+
     void Awake()
     {
         rb2d = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
 
     void Update()
@@ -20,6 +26,20 @@ public class PlayerMovement : MonoBehaviour
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
         movementInput = new Vector2(horizontal, vertical);
+
+        if (horizontal != 0 || vertical != 0)
+        {
+            isMoving = true;
+      
+        }
+        else
+        {
+            isMoving = false;
+        }
+
+        animator.SetBool("isMoving", isMoving);
+
+        
 
         // Apply speed multiplier when jogging
         if (Input.GetKey(jogKey))
